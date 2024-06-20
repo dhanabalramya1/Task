@@ -312,19 +312,93 @@
 }
 
 
-
-
 .sec-3
 {
-    margin: 20px;
-    display: felx;
+    margin: 40px;
 }
 .top
 {
     display: flex;
     justify-content: space-between;
+
 }
 .head 
 {
-    font-size: 40px;
+    font-size: 30px;
+}
+.button button
+{
+   margin: 0px 20px;
+   padding: 10px 20px;
+   border: none;
+   outline: none;
+   border-radius: 20px;
+   font-size: 18px;
+
+
+}
+.button button:hover
+{
+    background-color: orange;
+    color: #fff;
+}
+.boxes-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; 
+  padding: 20px;
+
+}
+
+.box1 {
+  margin-top: 20px;
+  flex: 1 1 300px; 
+  max-width: 300px; /* Maximum width for each box */
+  background-color: #f4f6f8; /* Box background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  text-align: center; /* Center align text */
+}
+
+.box1 img {
+  max-width: 100%;  /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below image */
+}
+
+.box1 h3 {
+  font-size: 1.2rem; /* Heading font size */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.box1 p {
+  font-size: 0.9rem; /* Paragraph font size */
+  color: #666666; /* Paragraph text color */
+  line-height: 1.6; /* Line height for readability */
+}
+
+@media (max-width: 768px) {
+  .boxes-1{
+    justify-content: center;
+  }
+  
+  .box1 {
+    flex: 1 1 calc(50% - 20px); /* Two boxes per row */
+    max-width: calc(50% - 20px); /* Limit width for two boxes per row */
+  }
+  .head 
+  {
+     font-size: 10px;
+  }
+   .button button
+  {
+     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .box1 {
+    flex: 1 1 100%; /* One box per row */
+    max-width: 100%; /* Full width for one box per row */
+  }
 }
